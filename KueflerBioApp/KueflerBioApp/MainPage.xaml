@@ -4,11 +4,12 @@
              xmlns:local="clr-namespace:KueflerBioApp"
              x:Class="KueflerBioApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+    <StackLayout Padding="50"
+                 Spacing="30">
+                <BoxView BackgroundColor="Blue"
+                             HeightRequest="100"></BoxView>
+
+
     </StackLayout>
 
 </ContentPage>
