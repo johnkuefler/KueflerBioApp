@@ -4,11 +4,63 @@
              xmlns:local="clr-namespace:KueflerBioApp"
              x:Class="KueflerBioApp.MainPage">
 
-    <StackLayout Padding="50"
-                 Spacing="30">
-                <BoxView BackgroundColor="Blue"
-                             HeightRequest="100"></BoxView>
+    <StackLayout Padding="20"
+                 Spacing="20"
+                 HorizontalOptions="FillAndExpand">
 
+        <Label Text="John Kuefler"
+               TextColor="White"
+               FontSize="36"
+               HorizontalTextAlignment="Center"/>
+
+
+        <Grid RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <BoxView BackgroundColor="Blue"
+                     WidthRequest="100"
+                     HeightRequest="100" 
+                     Grid.Row="0"
+                     Grid.Column="0"/>
+
+            <Button BackgroundColor="Blue" 
+                    WidthRequest="200"
+                    Grid.Row="0"
+                    Grid.Column="1"/>
+
+            <BoxView BackgroundColor="Green"
+                     WidthRequest="100"
+                     HeightRequest="100" 
+                     Grid.Row="1"
+                     Grid.Column="0"/>
+
+            <Button BackgroundColor="Green" 
+                    WidthRequest="200"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
+
+            <BoxView BackgroundColor="Red"
+                     WidthRequest="100"
+                     HeightRequest="100" 
+                     Grid.Row="2"
+                     Grid.Column="0"/>
+
+            <Button BackgroundColor="Red" 
+                    WidthRequest="200"
+                    Grid.Row="2"
+                    Grid.Column="1"/>
+
+        </Grid>
 
     </StackLayout>
 
