@@ -4,21 +4,7 @@
              x:Class="KueflerBioApp.AboutMePage">
     <ContentPage.Content>
         <StackLayout Spacing="50">
-            <Label Text="Welcome to Xamarin!"
-                   TextColor="Blue"
-                   FontSize="48"
-                   HorizontalTextAlignment="Center"
-                   VerticalOptions="CenterAndExpand" 
-                   HorizontalOptions="CenterAndExpand" />
-            
-            <Entry Placeholder="Hello World"
-                   Keyboard="Email"/>
-
-            <Button Text="OK"
-                    BackgroundColor="Red"
-                    TextColor="Gold"
-                    Padding="50"
-                    Margin="50,0,25,0"/>
+           <Label Text="Hello World"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

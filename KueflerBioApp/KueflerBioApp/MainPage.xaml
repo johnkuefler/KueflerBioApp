@@ -5,63 +5,65 @@
              x:Class="KueflerBioApp.MainPage">
 
     <StackLayout Padding="20"
-                 Spacing="20"
-                 HorizontalOptions="FillAndExpand">
+                 Spacing="20">
 
-        <Label Text="John Kuefler"
-               TextColor="White"
-               FontSize="36"
-               HorizontalTextAlignment="Center"/>
+            <Label Text="John Kuefler"
+                   TextColor="White"
+                   FontSize="36"
+                   HorizontalTextAlignment="Center"/>
 
+            <Grid RowSpacing="20">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
 
-        <Grid RowSpacing="20">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="2*"/>
-            </Grid.ColumnDefinitions>
-            
-            <BoxView BackgroundColor="Blue"
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <BoxView BackgroundColor="Blue"
                      WidthRequest="100"
                      HeightRequest="100" 
                      Grid.Row="0"
                      Grid.Column="0"/>
 
-            <Button BackgroundColor="Blue" 
+                <Button BackgroundColor="Blue" 
                     WidthRequest="200"
                     Grid.Row="0"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    FontSize="32"
+                    Text="Contact"/>
 
-            <BoxView BackgroundColor="Green"
+                <BoxView BackgroundColor="Green"
                      WidthRequest="100"
                      HeightRequest="100" 
                      Grid.Row="1"
                      Grid.Column="0"/>
 
-            <Button BackgroundColor="Green" 
+                <Button BackgroundColor="Green" 
                     WidthRequest="200"
                     Grid.Row="1"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    FontSize="32"
+                    Text="Skills"/>
 
-
-            <BoxView BackgroundColor="Red"
+                <BoxView BackgroundColor="Red"
                      WidthRequest="100"
                      HeightRequest="100" 
                      Grid.Row="2"
                      Grid.Column="0"/>
 
-            <Button BackgroundColor="Red" 
+                <Button BackgroundColor="Red" 
                     WidthRequest="200"
                     Grid.Row="2"
-                    Grid.Column="1"/>
+                    Grid.Column="1"
+                    FontSize="32"
+                    Text="About Me"/>
 
-        </Grid>
-
-    </StackLayout>
+            </Grid>
+        </StackLayout>
 
 </ContentPage>
