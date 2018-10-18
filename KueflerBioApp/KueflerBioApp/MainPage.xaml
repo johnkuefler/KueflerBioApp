@@ -2,68 +2,56 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:KueflerBioApp"
-             x:Class="KueflerBioApp.MainPage">
+             x:Class="KueflerBioApp.MainPage"
+             BackgroundColor="White">
 
-    <StackLayout Padding="20"
-                 Spacing="20">
+    <StackLayout
+         Padding="10"
+         Spacing="10">
 
-            <Label Text="John Kuefler"
+        <Label Text="About Me" 
+           HorizontalOptions="Center"
+    	   FontSize="40"
+    	   FontAttributes="Bold"
+    	   TextColor="Black"/>
+
+        <StackLayout BackgroundColor="Blue"
+                     Orientation="Horizontal">
+            <Image Source="user.png"
+                   WidthRequest="100"/>
+            <Label Text="My Bio"
+                   FontAttributes="Bold"
                    TextColor="White"
-                   FontSize="36"
-                   HorizontalTextAlignment="Center"/>
-
-            <Grid RowSpacing="20">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="2*"/>
-                </Grid.ColumnDefinitions>
-
-                <BoxView BackgroundColor="Blue"
-                     WidthRequest="100"
-                     HeightRequest="100" 
-                     Grid.Row="0"
-                     Grid.Column="0"/>
-
-                <Button BackgroundColor="Blue" 
-                    WidthRequest="200"
-                    Grid.Row="0"
-                    Grid.Column="1"
-                    FontSize="32"
-                    Text="Contact"/>
-
-                <BoxView BackgroundColor="Green"
-                     WidthRequest="100"
-                     HeightRequest="100" 
-                     Grid.Row="1"
-                     Grid.Column="0"/>
-
-                <Button BackgroundColor="Green" 
-                    WidthRequest="200"
-                    Grid.Row="1"
-                    Grid.Column="1"
-                    FontSize="32"
-                    Text="Skills"/>
-
-                <BoxView BackgroundColor="Red"
-                     WidthRequest="100"
-                     HeightRequest="100" 
-                     Grid.Row="2"
-                     Grid.Column="0"/>
-
-                <Button BackgroundColor="Red" 
-                    WidthRequest="200"
-                    Grid.Row="2"
-                    Grid.Column="1"
-                    FontSize="32"
-                    Text="About Me"/>
-
-            </Grid>
+                   FontSize="40"
+                   VerticalOptions="Center"/>
         </StackLayout>
+
+        <StackLayout BackgroundColor="LightGreen"
+                     Orientation="Horizontal"
+                     HeightRequest="100">
+            <Image Source="code.png"/>
+            <Label Text="My Skills"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   FontSize="40"
+                   VerticalOptions="Center"/>
+        </StackLayout>
+
+        <StackLayout BackgroundColor="Magenta"
+                     Orientation="Horizontal"
+                     HeightRequest="100">
+            <Image Source="contact.png"/>
+            <Label Text="Contact Me"
+                   FontAttributes="Bold"
+                   TextColor="White"
+                   FontSize="40"
+                   VerticalOptions="Center"/>
+        </StackLayout>
+
+        <Label VerticalOptions="EndAndExpand"
+               HorizontalOptions="Center"
+               Text="An app by John Kuefler"
+               TextColor="DarkGray" />
+    </StackLayout>
 
 </ContentPage>
