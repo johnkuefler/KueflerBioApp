@@ -17,6 +17,10 @@
 
         <StackLayout BackgroundColor="Blue"
                      Orientation="Horizontal">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="BioTapGestureRecognizer_OnTapped"/>
+            </StackLayout.GestureRecognizers>
+
             <Image Source="user.png"
                    WidthRequest="100"/>
             <Label Text="My Bio"
@@ -29,6 +33,10 @@
         <StackLayout BackgroundColor="LightGreen"
                      Orientation="Horizontal"
                      HeightRequest="100">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="SkillsTapGestureRecognizer_OnTapped"/>
+            </StackLayout.GestureRecognizers>
+
             <Image Source="code.png"/>
             <Label Text="My Skills"
                    FontAttributes="Bold"
@@ -40,6 +48,10 @@
         <StackLayout BackgroundColor="Magenta"
                      Orientation="Horizontal"
                      HeightRequest="100">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ContactTapGestureRecognizer_OnTapped"/>
+            </StackLayout.GestureRecognizers>
+
             <Image Source="contact.png"/>
             <Label Text="Contact Me"
                    FontAttributes="Bold"

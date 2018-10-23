@@ -13,5 +13,20 @@ namespace KueflerBioApp
         {
             InitializeComponent();
         }
+
+        private void BioTapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AboutMePage());
+        }
+
+        private void SkillsTapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new SkillsPage());
+        }
+
+        private void ContactTapGestureRecognizer_OnTapped(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ContactPage());
+        }
     }
 }

@@ -1,10 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="KueflerBioApp.AboutMePage">
+             x:Class="KueflerBioApp.AboutMePage"
+             Title="About me">
     <ContentPage.Content>
-        <StackLayout Spacing="50">
-           <Label Text="Hello World"/>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout Spacing="50"
+                         Padding="20">
+                <Image Source="me.jpg"
+                       WidthRequest="300"/>
+                <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque arcu mauris, blandit at eros vel, placerat lacinia magna. Donec vel nulla porta, pretium erat eu, tincidunt diam. Phasellus vel tortor arcu. Sed nec ipsum quis eros iaculis aliquet porttitor facilisis mauris. Cras sodales, sem eget hendrerit vehicula, felis ligula sollicitudin diam, ut tincidunt nulla turpis et arcu. Nullam dapibus elementum purus, eget pellentesque erat consequat non. Donec rutrum lacus vitae nibh interdum, sit amet bibendum nulla sollicitudin. Fusce vestibulum nibh eu nibh condimentum, vitae rutrum lectus molestie. Integer consectetur massa mi, nec pellentesque elit consectetur id. Sed elit nulla, convallis ac eros eget, viverra accumsan ipsum. Sed molestie lectus et sapien vehicula egestas. Morbi sed eleifend neque, ut ultrices ante. Cras id lacus dapibus, viverra risus vitae, semper eros. Donec accumsan nibh sit amet sem feugiat lacinia. Etiam lobortis maximus sodales. Cras mollis rhoncus maximus."/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
