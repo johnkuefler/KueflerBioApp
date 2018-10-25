@@ -16,5 +16,28 @@ namespace KueflerBioApp
 		{
 			InitializeComponent ();
 		}
+
+	    private void Button_OnClicked(object sender, EventArgs e)
+	    {
+	        if (string.IsNullOrEmpty(nameEntry.Text))
+	        {
+	            DisplayAlert("Error", "Please enter name", "Ok");
+	            return;
+	        }
+
+	        if (string.IsNullOrEmpty(emailEntry.Text))
+	        {
+	            DisplayAlert("Error", "Please enter email", "Ok");
+	            return;
+	        }
+
+	        if (string.IsNullOrEmpty(messageEditor.Text))
+	        {
+	            DisplayAlert("Error", "Please enter message", "Ok");
+	            return;
+	        }
+
+            DisplayAlert("Alert", "Your message was sent!", "Ok");
+	    }
 	}
 }

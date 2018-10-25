@@ -3,10 +3,36 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KueflerBioApp.ContactPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView>
+            <StackLayout
+            Padding="20"
+            Spacing="20">
+            
+            <Label Text="Contact Me"
+                   FontSize="30"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"/>
+
+            <BoxView BackgroundColor="Blue"
+                     HeightRequest="150"
+                     WidthRequest="50"/>
+
+            <Entry x:Name="nameEntry"
+                   Placeholder="name"/>
+
+            <Entry x:Name="emailEntry"
+                   Placeholder="email"/>
+
+            <Label Text="Enter your message below"/>
+            <Editor x:Name="messageEditor"
+                    HeightRequest="100"/>
+
+            <Button Text="Submit"
+                    BackgroundColor="Green"
+                    TextColor="White"
+                    Clicked="Button_OnClicked"/>
+
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
