@@ -12,22 +12,56 @@ namespace KueflerBioApp
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class SkillsPage : ContentPage
 	{
-        public ObservableCollection<string> Skills { get; set; }
+        public ObservableCollection<Skill> Skills { get; set; }
  
 		public SkillsPage ()
 		{
 			InitializeComponent ();
 
-		    this.Skills = new ObservableCollection<string>();
+            Skills = new ObservableCollection<Skill>();
+
+		    Skills.Add(new Skill
+		    {
+		        Icon="csharp.png",
+		        Description = "C# Programming",
+                Name = "C#",
+                Type = "programming",
+                AlternateName = "Csharp"
+		    });
+            Skills.Add(new Skill
+            {
+                Icon="teacher.png",
+                Description = "Teaching programming courses",
+                Name = "Teaching",
+                Type = "communication",
+                AlternateName = "Making stuff up"
+            });
+
+            skillsListView.ItemsSource = this.Skills;
 		}
 
-	    private void Button_OnClicked(object sender, EventArgs e)
-	    {
-	        this.Skills.Add(skillEntry.Text);
+        private void SkillsListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
 
-	        skillEntry.Text = "";
+            Skill selectedSkill = e.SelectedItem as Skill;
 
-	        skillsListView.ItemsSource = this.Skills;
-	    }
-	}
+            (sender as ListView).SelectedItem = null;
+
+            Navigation.PushAsync(new SkillDetailPage(selectedSkill));
+            // DisplayAlert("Hi", "You tapped " + selectedSkill.Name, "ok");
+        }
+    }
+
+    public class Skill
+    {
+        public string Icon { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public string AlternateName { get; set; }
+    }
 }

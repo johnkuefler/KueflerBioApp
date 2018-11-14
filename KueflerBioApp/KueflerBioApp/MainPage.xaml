@@ -15,6 +15,11 @@
     	   FontAttributes="Bold"
     	   TextColor="Black"/>
 
+            <Label Text=""
+                   HorizontalTextAlignment="Center"
+                   IsVisible="False"
+                   x:Name="usernameLabel"/>
+
         <StackLayout BackgroundColor="Blue"
                      Orientation="Horizontal">
             <StackLayout.GestureRecognizers>
@@ -60,7 +65,15 @@
                    VerticalOptions="Center"/>
         </StackLayout>
 
-        <Label VerticalOptions="EndAndExpand"
+
+        <Button BackgroundColor="LightGray"
+                VerticalOptions="EndAndExpand"
+                TextColor="White"
+                Text="Login"
+                x:Name="loginButton"
+                Clicked="Button_OnClicked"/>
+
+        <Label VerticalOptions="End"
                HorizontalOptions="Center"
                Text="An app by John Kuefler"
                TextColor="DarkGray" />
