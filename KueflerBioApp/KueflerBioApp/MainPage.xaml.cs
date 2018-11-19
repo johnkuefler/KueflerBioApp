@@ -51,5 +51,10 @@ namespace KueflerBioApp
         {
             Navigation.PushAsync(new Loginpage());
         }
+
+        private void GotoPicture_OnClicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new PicturePage());
+        }
     }
 }

@@ -65,6 +65,12 @@
                    VerticalOptions="Center"/>
         </StackLayout>
 
+        <Button BackgroundColor="LightGray"
+                VerticalOptions="EndAndExpand"
+                TextColor="White"
+                Text="Picture Page"
+                x:Name="gotoPicture"
+                Clicked="GotoPicture_OnClicked"/>
 
         <Button BackgroundColor="LightGray"
                 VerticalOptions="EndAndExpand"
