@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Media;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,33 @@ namespace KueflerBioApp
 			InitializeComponent ();
 		}
 
-	    private void Button_OnClicked(object sender, EventArgs e)
+	    private async void Button_OnClicked(object sender, EventArgs e)
 	    {
-	        throw new NotImplementedException();
-	    }
+	        await CrossMedia.Current.Initialize();
+
+	        if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+	        {
+	            DisplayAlert("No Camera", ":( No camera available.", "OK");
+	            return;
+	        }
+
+	        var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+	        {
+	            Directory = "Sample",
+	            Name = "test.jpg"
+	        });
+
+	        if (file == null)
+	            return;
+
+	        await DisplayAlert("File Location", file.Path, "OK");
+
+	        pictureOnPage.Source = ImageSource.FromStream(() =>
+	        {
+	            var stream = file.GetStream();
+	            return stream;
+	        });
+
+        }
 	}
 }
