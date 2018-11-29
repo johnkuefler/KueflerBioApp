@@ -15,6 +15,19 @@ namespace KueflerBioApp
         public EffectsPage()
         {
             InitializeComponent();
+
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            await alertFrame.TranslateTo(alertFrame.TranslationX, alertFrame.TranslationY - 100, 500);
+            await alertFrame.FadeTo(0.7, 700);
+
+            agendaFrame.FadeTo(0.7, 700);
+            agendaFrame.TranslateTo(agendaFrame.TranslationX, agendaFrame.TranslationY - 140, 500);
+
         }
     }
 }

@@ -3,14 +3,44 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="KueflerBioApp.EffectsPage"
              BackgroundImage="background.jpg">
+
+
     <ContentPage.Content>
         <StackLayout
             Padding="20"
             Spacing="20">
 
-           
+            <Frame Opacity="0"
+                   Margin="0,140,0,0"
+                   BackgroundColor="White"
+                   x:Name="alertFrame">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="30">
+                    <Image Source="alert.png"
+                           WidthRequest="50"
+                           HeightRequest="50"/>
+                    <Label Text="3 Unread Alerts"
+                           TextColor="Black"
+                           FontSize="24"
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
 
-          
+            <Frame Opacity="0"
+                   BackgroundColor="White"
+                   x:Name="agendaFrame"
+                   Margin="0,40,0,0">
+                <StackLayout Orientation="Horizontal"
+                             Spacing="30">
+                    <Image Source="calendar.png"
+                           WidthRequest="50"
+                           HeightRequest="50"/>
+                    <Label Text="New Agenda items"
+                           TextColor="Black"
+                           FontSize="24"
+                           VerticalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
